@@ -1,6 +1,6 @@
 {
 	"name": "stamp-duty",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Stamp Duty calculator for Australian Home Loans",
 	"main": "index.js",
 	"scripts": {
