@@ -1,21 +1,29 @@
 {
-  "name": "stamp-duty",
-  "version": "0.0.0",
-  "description": "Stamp Duty calculator for Australian Home Loans",
-  "main": "index.js",
-  "scripts": {
-    "test": "tap test"
-  },
-  "repository": "",
-  "keywords": [
-    "Australia",
-    "stamp",
-    "duty",
-    "calculator"
-  ],
-  "author": "hongymagic",
-  "license": "BSD",
-  "devDependencies": {
-    "tap": "~0.4.1"
-  }
+	"name": "stamp-duty",
+	"version": "0.0.1",
+	"description": "Stamp Duty calculator for Australian Home Loans",
+	"main": "index.js",
+	"scripts": {
+		"test": "tap test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hongymagic/stamp-duty.git"
+	},
+	"homepage": "https://github.com/hongymagic/stamp-duty",
+	"keywords": [
+		"Australia",
+		"stamp",
+		"duty",
+		"calculator"
+	],
+	"author": {
+		"name": "David Hong",
+		"email": "d.hong@me.com",
+		"url": "http://davidhong.co"
+	},
+	"license": "BSD",
+	"devDependencies": {
+		"tap": "~0.4.1"
+	}
 }
