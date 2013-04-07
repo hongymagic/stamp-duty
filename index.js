@@ -21,12 +21,11 @@ Array.prototype.first = function (filter) {
 			return this[i];
 }
 
-
 module.exports = function (state, value) {
 	if (state == null) state = 'nsw';
 	if (value == null) value = 0;
 
-	var bands = require(path.join(__dirname, 'data', state));
+	var bands = require(path.join(__dirname, 'data', state.toLowerCase()));
 	var band = bands.first(filter(value));
 	var duty = band.base + (value - (band.over || band.min)) * (band.rate / 100);
 
