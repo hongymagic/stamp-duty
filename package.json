@@ -1,0 +1,21 @@
+{
+  "name": "stamp-duty",
+  "version": "0.0.0",
+  "description": "Stamp Duty calculator for Australian Home Loans",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test"
+  },
+  "repository": "",
+  "keywords": [
+    "Australia",
+    "stamp",
+    "duty",
+    "calculator"
+  ],
+  "author": "hongymagic",
+  "license": "BSD",
+  "devDependencies": {
+    "tap": "~0.4.1"
+  }
+}
