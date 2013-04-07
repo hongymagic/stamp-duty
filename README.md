@@ -1,5 +1,7 @@
 # Stamp Duty Calculator
 
+[![Build Status](https://travis-ci.org/hongymagic/stamp-duty.png)](https://travis-ci.org/hongymagic/stamp-duty)
+
 Node module for calculating Stamp Duty in Australia.
 
 # Install
