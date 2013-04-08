@@ -1,4 +1,3 @@
-var path = require('path');
 var data = require('./data');
 
 function filter (value) {
