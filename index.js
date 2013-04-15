@@ -14,11 +14,11 @@ function toFixed (value, precision) {
 	return parseFloat(fixed);
 }
 
-Array.prototype.first = function (filter) {
+function first (array, filter) {
 	var i, length;
-	for (i = 0, length = this.length; i < length; i += 1)
-		if (filter.call(this, this[i]) === true)
-			return this[i];
+	for (i = 0, length = array.length; i < length; i += 1)
+		if (filter.call(array, array[i]) === true)
+			return array[i];
 }
 
 module.exports = function (state, value) {
@@ -26,7 +26,7 @@ module.exports = function (state, value) {
 	if (value == null) value = 0;
 
 	var bands = data[state.toLowerCase()];
-	var band = bands.first(filter(value));
+	var band = first(bands, filter(value));
 	var duty = band.base + (value - (band.over || band.min)) * (band.rate / 100);
 
 	return toFixed(duty);

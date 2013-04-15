@@ -44,5 +44,30 @@ module.exports = {
 		{ min: 150000,  max: 360000,   rate: 3.80, base: 3135 },
 		{ min: 360000,  max: 300000,   rate: 4.75, base: 11115 },
 		{ min: 725000,  max: Infinity, rate: 5.15, base: 28435 }
+	],
+
+	tas: [
+		{ min: 0,      max: 1300,     rate: 0.00, base: 20 },
+		{ min: 1300,   max: 10000,    rate: 1.50, },
+		{ min: 10000,  max: 30000,    rate: 2.00, base: 150 },
+		{ min: 30000,  max: 75000,    rate: 2.50, base: 550 },
+		{ min: 75000,  max: 150000,   rate: 3.00, base: 1675 },
+		{ min: 150000, max: 225000,   rate: 3.50, base: 3925 },
+		{ min: 225000, max: Infinity, rate: 4.00, base: 6550 }
+	],
+
+	nt: [
+		{ min: 0,       max: 525000,   formula: function (value) { var v = value / 1000; return (0.06571441 * (v* v)) + (15 * (v)); } },
+		{ min: 525000,  max: 3000000,  rate: 4.95 },
+		{ min: 3000000, max: Infinity, rate: 5.45 }
+	],
+
+	act: [
+		{ min: 0,       max: 100000,   rate: 2.00, base: 20 },
+		{ min: 100000,  max: 200000,   rate: 3.50 },
+		{ min: 200000,  max: 300000,   rate: 4.00 },
+		{ min: 300000,  max: 500000,   rate: 5.50 },
+		{ min: 500000,  max: 1000000,  rate: 5.75 },
+		{ min: 1000000, max: Infinity, rate: 6.75 }
 	]
 };
