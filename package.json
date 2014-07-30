@@ -1,29 +1,57 @@
 {
-	"name": "stamp-duty",
-	"version": "0.0.4",
-	"description": "Stamp Duty calculator for Australian Home Loans",
-	"main": "index.js",
-	"scripts": {
-		"test": "tap test"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/hongymagic/stamp-duty.git"
-	},
-	"homepage": "https://github.com/hongymagic/stamp-duty",
-	"keywords": [
-		"Australia",
-		"stamp",
-		"duty",
-		"calculator"
-	],
-	"author": {
-		"name": "David Hong",
-		"email": "d.hong@me.com",
-		"url": "http://davidhong.co"
-	},
-	"license": "BSD",
-	"devDependencies": {
-		"tap": "~0.4.1"
-	}
+  "name": "stamp-duty",
+  "version": "1.0.0-20140801",
+  "description": "Stamp Duty calculator for Australian Home Loans",
+  "main": "dist/stamp-duty.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hongymagic/stamp-duty.git"
+  },
+  "homepage": "https://github.com/hongymagic/stamp-duty",
+  "keywords": [
+    "Australia",
+    "stamp",
+    "duty",
+    "stamp duty",
+    "calculator"
+  ],
+  "testling": {
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6..latest",
+      "ipad/6..latest",
+      "android-browser/latest"
+    ]
+  },
+  "author": {
+    "name": "David Hong",
+    "email": "d.hong@me.com",
+    "url": "http://davidhong.co"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-concat": "^2.3.4",
+    "gulp-filesize": "0.0.6",
+    "gulp-jasmine": "^0.3.0",
+    "gulp-jshint": "^1.8.2",
+    "gulp-load-plugins": "^0.5.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-tap": "^0.1.1",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "^3.0.0",
+    "jasmine-reporters": "^2.0.3",
+    "jshint-stylish": "^0.4.0",
+    "jshint-teamcity": "^1.0.5",
+    "tap": "~0.4.12"
+  }
 }

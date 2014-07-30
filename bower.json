@@ -1,0 +1,29 @@
+{
+  "name": "stamp-duty",
+  "version": "1.0.0-20140801",
+  "homepage": "https://github.com/hongymagic/stamp-duty",
+  "authors": [
+    "hongymagic <d.hong@me.com>"
+  ],
+  "description": "Stamp duty calculator for Australia",
+  "main": "dist/stamp-duty.browser.js",
+  "keywords": [
+    "stampduty",
+    "stamp",
+    "duty",
+    "stamp",
+    "duty",
+    "australia",
+    "tax",
+    "property"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ]
+}
