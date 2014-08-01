@@ -25,5 +25,6 @@
     "components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {}
 }

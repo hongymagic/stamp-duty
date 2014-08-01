@@ -1,5 +1,4 @@
 var gulp  = require('gulp');
-var jr    = require('jasmine-reporters');
 var p     = require('gulp-load-plugins')();
 var paths = {
 	util: ['gulpfile.js'],
@@ -24,8 +23,8 @@ gulp.task('jshint', function () {
 
 gulp.task('test', ['jshint'], function () {
 	return gulp.src(paths.test)
-		.pipe(p.jasmine({
-			reporter: new jr.TapReporter()
+		.pipe(p.mocha({
+			ui: 'bdd'
 		}));
 });
 

@@ -4,7 +4,7 @@
   "description": "Stamp Duty calculator for Australian Home Loans",
   "main": "dist/stamp-duty.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "mocha --ui bdd"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
     "calculator"
   ],
   "testling": {
+    "files": "test/*.js",
+    "harness": "mocha-bdd",
     "browsers": [
       "ie/6..latest",
       "chrome/22..latest",
@@ -41,17 +43,15 @@
     "gulp-browserify": "^0.5.0",
     "gulp-concat": "^2.3.4",
     "gulp-filesize": "0.0.6",
-    "gulp-jasmine": "^0.3.0",
     "gulp-jshint": "^1.8.2",
     "gulp-load-plugins": "^0.5.3",
+    "gulp-mocha": "^0.5.2",
     "gulp-rename": "^1.2.0",
     "gulp-rimraf": "^0.1.0",
-    "gulp-tap": "^0.1.1",
     "gulp-uglify": "^0.3.1",
     "gulp-util": "^3.0.0",
-    "jasmine-reporters": "^2.0.3",
     "jshint-stylish": "^0.4.0",
     "jshint-teamcity": "^1.0.5",
-    "tap": "~0.4.12"
+    "mocha": "^1.21.3"
   }
 }
