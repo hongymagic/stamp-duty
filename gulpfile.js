@@ -28,11 +28,17 @@ gulp.task('test', ['jshint'], function () {
 		}));
 });
 
-gulp.task('dist', ['dist.node', 'dist.browser']);
+gulp.task('dist', ['dist.node', 'dist.angular']);
 
 gulp.task('dist.node', function () {
 	return gulp.src(paths.src)
 		.pipe(p.concat('stamp-duty.js'))
+		.pipe(gulp.dest(paths.dist));
+});
+
+gulp.task('dist.angular', ['dist.browser'], function () {
+	return gulp.src(['dist/stamp-duty.browser.js', 'lib/angular.js'])
+		.pipe(p.concat('stamp-duty.angular.js'))
 		.pipe(gulp.dest(paths.dist));
 });
 

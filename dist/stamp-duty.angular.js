@@ -1,10 +1,11 @@
+!function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.stampduty=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 // Assumptions
 //
 //	- Primary place of residences;
 //	- No first home buyer's grants;
 //	- No tax-exemptions of any sort;
 
-var Bracket = require('./bracket');
+var Bracket = _dereq_('./bracket');
 
 //
 // Calculate ACT stamp duty for a given price. Assumes no tax-exemptions,
@@ -46,13 +47,7 @@ module.exports = function (price) {
 	var result = Math.ceil(part(bracket, price));
 	return result;
 };
-/* global angular */
-angular
-.module('stampduty')
-.factory('stampduty', ['$log', '$window', function ($log, $window) {
-	return $window.stampduty;
-}]);
-
+},{"./bracket":2}],2:[function(_dereq_,module,exports){
 /**
  * Tax bracket object.
  */
@@ -89,15 +84,16 @@ Bracket.prototype.within = function (number) {
 };
 
 module.exports = Bracket;
+},{}],3:[function(_dereq_,module,exports){
 var states = {
-	'nsw': require('./nsw'),
-	'vic': require('./vic'),
-	'wa': require('./wa'),
-	'tas': require('./tas'),
-	'act': require('./act'),
-	'nt': require('./nt'),
-	'sa': require('./sa'),
-	'qld': require('./qld')
+	'nsw': _dereq_('./nsw'),
+	'vic': _dereq_('./vic'),
+	'wa': _dereq_('./wa'),
+	'tas': _dereq_('./tas'),
+	'act': _dereq_('./act'),
+	'nt': _dereq_('./nt'),
+	'sa': _dereq_('./sa'),
+	'qld': _dereq_('./qld')
 };
 
 /**
@@ -134,13 +130,14 @@ module.exports = function stampduty(state, price) {
 
 	return states[state](price);
 };
+},{"./act":1,"./nsw":4,"./nt":5,"./qld":6,"./sa":7,"./tas":8,"./vic":9,"./wa":10}],4:[function(_dereq_,module,exports){
 // Assumptions
 //
 //	- Primary place of residences;
 //	- No first home buyer's grants;
 //	- No tax-exemptions of any sort;
 
-var Bracket = require('./bracket');
+var Bracket = _dereq_('./bracket');
 
 //
 // Calculate NSW stamp duty for a given price. Assumes no tax-exemptions,
@@ -177,6 +174,7 @@ module.exports = function (price) {
 	var result = Math.ceil(part(bracket, price));
 	return result;
 };
+},{"./bracket":2}],5:[function(_dereq_,module,exports){
 module.exports = function (price) {
 	var V = price / 1000;
 	var result = 0;
@@ -190,6 +188,7 @@ module.exports = function (price) {
 	}
 	return Math.ceil(result);
 };
+},{}],6:[function(_dereq_,module,exports){
 // Assumptions
 //
 //	- Primary place of residences;
@@ -197,7 +196,7 @@ module.exports = function (price) {
 //	- No tax-exemptions of any sort;
 //	- Home concession rates;
 
-var Bracket = require('./bracket');
+var Bracket = _dereq_('./bracket');
 
 //
 // Calculate QLD stamp duty for a given price. Assumes no tax-exemptions,
@@ -232,6 +231,7 @@ module.exports = function (price) {
 	var result = Math.ceil(part(bracket, price));
 	return result;
 };
+},{"./bracket":2}],7:[function(_dereq_,module,exports){
 // Assumptions
 //
 //	- Primary place of residences;
@@ -239,7 +239,7 @@ module.exports = function (price) {
 //	- No tax-exemptions of any sort;
 //	- No Off-the-plan apartment concessions;
 
-var Bracket = require('./bracket');
+var Bracket = _dereq_('./bracket');
 
 //
 // Calculate SA stamp duty for a given price. Assumes no tax-exemptions,
@@ -278,6 +278,7 @@ module.exports = function (price) {
 	var result = Math.ceil(part(bracket, price));
 	return result;
 };
+},{"./bracket":2}],8:[function(_dereq_,module,exports){
 // Assumptions
 //
 //	- Primary place of residences;
@@ -285,7 +286,7 @@ module.exports = function (price) {
 //	- No tax-exemptions of any sort;
 //	- No Off-the-plan apartment concessions;
 
-var Bracket = require('./bracket');
+var Bracket = _dereq_('./bracket');
 
 //
 // Calculate TAS stamp duty for a given price. Assumes no tax-exemptions,
@@ -323,13 +324,14 @@ module.exports = function (price) {
 	var result = Math.ceil(part(bracket, price));
 	return result;
 };
+},{"./bracket":2}],9:[function(_dereq_,module,exports){
 // Assumptions
 //
 //	- Primary place of residences;
 //	- No first home buyer's grants;
 //	- No tax-exemptions of any sort;
 
-var Bracket = require('./bracket');
+var Bracket = _dereq_('./bracket');
 
 //
 // Calculate VIC stamp duty for a given price. Assumes no tax-exemptions,
@@ -366,6 +368,7 @@ module.exports = function (price) {
 	var result = Math.ceil(percentage(bracket, price));
 	return result;
 };
+},{"./bracket":2}],10:[function(_dereq_,module,exports){
 // Assumptions
 //
 //	- Primary place of residences;
@@ -373,7 +376,7 @@ module.exports = function (price) {
 //	- No tax-exemptions of any sort;
 //	- Uses Concessional rate - S147 as primary place of residence is assumed;
 
-var Bracket = require('./bracket');
+var Bracket = _dereq_('./bracket');
 
 //
 // Calculate WA stamp duty for a given price. Assumes no tax-exemptions,
@@ -408,3 +411,12 @@ module.exports = function (price) {
 	var result = Math.ceil(part(bracket, price));
 	return result;
 };
+},{"./bracket":2}]},{},[3])
+(3)
+});
+/* global angular */
+angular
+.module('stampduty')
+.factory('stampduty', ['$log', '$window', function ($log, $window) {
+	return $window.stampduty;
+}]);
