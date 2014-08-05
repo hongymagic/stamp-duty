@@ -46,13 +46,6 @@ module.exports = function (price) {
 	var result = Math.ceil(part(bracket, price));
 	return result;
 };
-/* global angular */
-angular
-.module('stampduty')
-.factory('stampduty', ['$log', '$window', function ($log, $window) {
-	return $window.stampduty;
-}]);
-
 /**
  * Tax bracket object.
  */

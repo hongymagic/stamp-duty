@@ -1,8 +1,9 @@
 var gulp  = require('gulp');
 var p     = require('gulp-load-plugins')();
 var paths = {
+	all: ['lib/**/*.js', 'test/**/*.js'],
 	util: ['gulpfile.js'],
-	src: ['lib/**/*.js'],
+	src: ['lib/**/*.js', '!lib/angular.js'],
 	test: ['test/**/*.js'],
 	dist: 'dist'
 };
@@ -16,7 +17,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('jshint', function () {
-	return gulp.src(paths.src.concat(paths.util))
+	return gulp.src(paths.all.concat(paths.util))
 		.pipe(p.jshint())
 		.pipe(p.jshint.reporter('jshint-stylish'));
 });

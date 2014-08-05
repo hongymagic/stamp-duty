@@ -7,7 +7,7 @@ module.exports = {
 			it('should return $' + expected + ' for property priced at $' + price, function () {
 				assert.equal(stampduty(state, price), expected);
 			});
-		}
+		};
 	}
 };
 

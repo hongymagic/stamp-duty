@@ -61,5 +61,9 @@
 	"white"         : true,
 
 	"maxerr"        : 100,
-	"indent"        : 4
+	"indent"        : 4,
+	"predef"        : [
+		"describe",
+		"it"
+	]
 }
